@@ -1,144 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugerencias o Reclamos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<form action="https://formsubmit.co/Liliput.peru@gmail.com" method="POST">
 
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .form-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 40px;
-            max-width: 600px;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .form-container:hover {
-            transform: translateY(-5px);
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 28px;
-            text-align: center;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-
-        .campo {
-            margin-bottom: 25px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #555;
-            font-size: 16px;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            font-size: 16px;
-            font-family: inherit;
-            resize: vertical;
-            transition: all 0.3s ease;
-            outline: none;
-        }
-
-        textarea:focus {
-            border-color: #764ba2;
-            box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
-        }
-
-        button {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 14px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        .mensaje-info {
-            margin-top: 20px;
-            padding: 12px;
-            background: #f0f0f0;
-            border-radius: 10px;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <h2></h2>
-        <div class="subtitle">Sugerencia o reclamo</div>
-
-        <form action="https://formsubmit.co/Liliput.peru@gmail.com" method="POST">
-            <!-- Campo único: texto amplio -->
-            <div class="campo">
-                <label for="mensaje"> mensaje:</label>
-                <textarea 
-                    id="mensaje"
-                    name="sugerencia_o_reclamo" 
-                    placeholder="Escribe aquí tu sugerencia o reclamo de forma detallada..." 
-                    rows="8" 
-                    required
-                ></textarea>
-            </div>
-
-            <!-- Opcional: para que el asunto del correo sea claro -->
-            <input type="hidden" name="_subject" value="Nueva sugerencia/reclamo desde formulario web">
-
-            <button type="submit"> Enviar mensaje</button>
-
-            <div class="mensaje-info">
-               
-            </div>
-        </form>
+    <div class="campo">
+        <label for="mensaje"> mensaje:</label>
+        <textarea 
+            id="mensaje"
+            name="sugerencia_o_reclamo" 
+            placeholder="Escribe aquí tu sugerencia o reclamo de forma detallada..." 
+            rows="8" 
+            required
+        ></textarea>
     </div>
-</body>
-</html>
+
+    <!-- Asunto del correo -->
+    <input type="hidden" name="_subject" value="Nueva sugerencia/reclamo - Paciente">
+
+    <!-- Identificador -->
+    <input type="hidden" name="tipo" value="Paciente">
+
+    <button type="submit"> Enviar mensaje</button>
+
+</form>
